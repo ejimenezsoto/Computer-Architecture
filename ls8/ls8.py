@@ -8,5 +8,10 @@ from cpu import *
 
 cpu = CPU()
 
-cpu.load()
+if len(sys.argv) < 2:
+    print("ERROR, MUST SPECIFY FILE")
+
+prog_path = sys.argv[1]
+
+cpu.load(prog_path)
 cpu.run()
